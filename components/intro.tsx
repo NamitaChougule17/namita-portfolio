@@ -90,7 +90,7 @@ export default function Intro() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            I'm a Data Engineer with 3+ years of experience building scalable data pipelines, cloud data platforms, and real-time processing systems. I work across SQL, Python, Spark, and AWS to turn raw data into reliable, analytics-ready systems, and I also build AI-enabled data pipelines that support intelligent applications and automation. I enjoy solving complex data problems with clean, production-ready solutions.
+            I am a Data Engineer with 3+ years of experience building scalable data pipelines, cloud data platforms, and real-time processing systems. I work across SQL, Python, Spark, and AWS to turn raw data into reliable, analytics-ready systems, and I also build AI-enabled data pipelines that support intelligent applications and automation. I enjoy solving complex data problems with clean, production-ready solutions.
           </motion.p>
         </div>
       </div>
