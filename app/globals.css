@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  --line-color: #e5e7eb;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.2);
+}
+
+.borderBlack {
+  @apply border border-black/10;
+}
+#experience ul {
+  padding-left: 0.5rem; 
+}
+
+#experience li {
+  padding-left: 0.5rem; 
+  margin-left: 0; 
+}
+.text-gradient {
+  @apply bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent;
+}
+
+.card-spotlight {
+  pointer-events: none;
+  background: radial-gradient(
+    220px circle at var(--mx) var(--my),
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.06) 35%,
+    transparent 60%
+  );
+  mix-blend-mode: overlay;
+}
+
+
