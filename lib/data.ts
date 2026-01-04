@@ -165,6 +165,20 @@ export const projectsData = [
     githubUrl: "https://github.com/NamitaChougule17/Digit-Clustering",
     liveUrl: "",
   },
+  {
+    title: "Pokémon Combat Points Predictor",
+    description: "Built predictive models from scratch to estimate Pokémon Combat Points using linear regression and a multi-layer perceptron. Implemented gradient descent, forward and backward propagation, and custom loss functions without relying on ML frameworks. Evaluated model performance on training and test data and compared classical regression with a neural network approach to understand trade-offs in accuracy and convergence.",
+    tags: [
+      "Python",
+      "NumPy",
+      "Pandas",
+      "Machine Learning",
+      "Neural Networks",
+    ],
+    imageUrl: factchecker,
+    githubUrl: "https://github.com/NamitaChougule17/pokemon-combat-points-predictor",
+    liveUrl: "",
+  },
 ] as const;
 
 export const educationData = [
