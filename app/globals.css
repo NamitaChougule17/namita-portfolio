@@ -100,17 +100,7 @@ html.dark .education-grade {
   color: inherit !important;
 }
 
-/* Fix education cards in Experience component - ensure equal heights and light text */
-#experience .relative.rounded-xl.p-\[1\.5px\].bg-gradient-to-br {
-  height: 340px !important;
-  min-height: 340px !important;
-  max-height: 340px !important;
-}
-
-#experience .relative.rounded-xl.bg-gradient-to-br.p-6,
-#experience .relative.rounded-xl.bg-gradient-to-br.p-8 {
-  height: 100% !important;
-}
+/* Experience cards - allow dynamic height for expansion */
 
 /* Force light text in Experience education cards */
 #experience .text-black {

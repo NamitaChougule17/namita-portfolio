@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import SectionHeading from "./section-heading";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 // Gradient color schemes for experience boxes
@@ -29,54 +29,17 @@ function ExpandingCard({
   onClick: () => void;
   children: React.ReactNode;
 }) {
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState<number | "auto">("auto");
-
-  useEffect(() => {
-    if (contentRef.current) {
-      // Set height based on actual content height
-      const contentHeight = contentRef.current.scrollHeight;
-      setHeight(contentHeight);
-    }
-  }, [isExpanded, children]);
-
-  // Also measure on resize
-  useEffect(() => {
-    const resizeObserver = new ResizeObserver(() => {
-      if (contentRef.current) {
-        setHeight(contentRef.current.scrollHeight);
-      }
-    });
-
-    if (contentRef.current) {
-      resizeObserver.observe(contentRef.current);
-    }
-
-    return () => {
-      resizeObserver.disconnect();
-    };
-  }, []);
-
   return (
-    <motion.div
+    <div
       onClick={onClick}
-      className={`cursor-pointer group relative rounded-xl p-[1.5px] bg-gradient-to-br ${scheme.border} transition-all duration-300 hover:shadow-[0_20px_60px_-15px_rgba(99,102,241,0.7)] shadow-[0_8px_30px_-10px_rgba(99,102,241,0.4)]`}
-      whileHover={{ scale: 1.02 }}
-      transition={{ duration: 0.2 }}
+      className={`cursor-pointer group rounded-xl p-[1.5px] bg-gradient-to-br ${scheme.border} transition-all duration-300 hover:shadow-[0_20px_60px_-15px_rgba(99,102,241,0.7)] shadow-[0_8px_30px_-10px_rgba(99,102,241,0.4)] w-full`}
+      style={{ position: 'relative', display: 'block' }}
     >
       {/* Inner card with gradient background */}
-      <motion.div 
-        className={`relative rounded-xl bg-gradient-to-br ${scheme.bg} overflow-hidden`}
-        animate={{
-          height: height === "auto" ? "auto" : `${height}px`
-        }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-      >
-        <div ref={contentRef}>
-          {children}
-        </div>
-      </motion.div>
-    </motion.div>
+      <div className={`rounded-xl bg-gradient-to-br ${scheme.bg} w-full`} style={{ position: 'relative' }}>
+        {children}
+      </div>
+    </div>
   );
 }
 
@@ -94,7 +57,7 @@ export default function Experience() {
           {/* Vertical timeline line - centered */}
           <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500/40 via-purple-500/40 to-transparent hidden sm:block" />
           
-          <div className="space-y-16 sm:space-y-20">
+          <div>
             {experiencesData.map((item, index) => {
               const introSentence = item.description[0];
               const bulletPoints = item.description.slice(1);
@@ -103,16 +66,14 @@ export default function Experience() {
               const scheme = gradientSchemes[index % gradientSchemes.length];
               
               return (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.4, delay: index * 0.08 }}
-                  className={`relative flex items-start ${isLeft ? 'flex-row' : 'flex-row-reverse'} sm:flex-row`}
+                  className={`block mb-8 sm:mb-20 last:mb-0`}
+                  style={{ position: 'relative', width: '100%' }}
                 >
-                  {/* Content - Left or Right */}
-                  <div className={`w-full sm:w-[calc(50%-2rem)] ${isLeft ? 'sm:pr-8' : 'sm:pl-8'} ${isLeft ? 'sm:mr-auto' : 'sm:ml-auto'}`}>
+                  <div className={`flex items-start flex-col sm:flex-row ${isLeft ? 'sm:flex-row' : 'sm:flex-row-reverse'}`}>
+                  {/* Content - Full width on mobile, Left or Right on desktop */}
+                  <div className={`w-full sm:w-[calc(50%-2rem)] ${isLeft ? 'sm:pr-8' : 'sm:pl-8'} ${isLeft ? 'sm:mr-auto' : 'sm:ml-auto'}`} style={{ position: 'relative', zIndex: 1 }}>
                     {/* Expandable Box/Card with colorful gradient */}
                     <ExpandingCard
                       isExpanded={isExpanded}
@@ -161,43 +122,31 @@ export default function Experience() {
                           </div>
 
                           {/* Secondary view - expandable details */}
-                          <AnimatePresence>
-                            {isExpanded && (
-                              <motion.div
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: "auto", opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.3, ease: "easeInOut" }}
-                                style={{ overflow: "hidden" }}
-                              >
-                                <div className="pt-6 mt-6 border-t border-white/20">
-                                  {/* Bullet points - grouped and scannable */}
-                                  <ul className="space-y-3 list-none">
-                                    {bulletPoints.map((point, idx) => (
-                                      <motion.li 
-                                        key={idx}
-                                        initial={{ opacity: 0, x: isLeft ? -10 : 10 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: idx * 0.05 }}
-                                        className="flex items-start gap-3 text-sm sm:text-base leading-relaxed text-gray-200"
-                                      >
-                                        <span className="mt-2.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white/70"></span>
-                                        <span>{point}</span>
-                                      </motion.li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
+                          {isExpanded && (
+                            <div className="pt-6 mt-6 border-t border-white/20">
+                              {/* Bullet points - grouped and scannable */}
+                              <ul className="space-y-3 list-none">
+                                {bulletPoints.map((point, idx) => (
+                                  <li 
+                                    key={idx}
+                                    className="flex items-start gap-3 text-sm sm:text-base leading-relaxed text-gray-200"
+                                  >
+                                    <span className="mt-2.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white/70"></span>
+                                    <span>{point}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
                           </div>
                         </div>
                     </ExpandingCard>
                   </div>
 
-                  {/* Timeline dot - centered, positioned on the box, matching gradient */}
-                  <div className={`absolute left-1/2 transform -translate-x-1/2 top-6 sm:top-8 w-4 h-4 rounded-full bg-gradient-to-br ${scheme.dot} border-2 border-gray-900 z-20 shadow-lg hidden sm:block`} />
-                </motion.div>
+                    {/* Timeline dot - centered, positioned on the box, matching gradient */}
+                    <div className={`absolute left-1/2 transform -translate-x-1/2 top-6 sm:top-8 w-4 h-4 rounded-full bg-gradient-to-br ${scheme.dot} border-2 border-gray-900 z-20 shadow-lg hidden sm:block`} />
+                  </div>
+                </div>
               );
             })}
           </div>
