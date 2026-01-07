@@ -9,6 +9,7 @@ import ContactFormEmail from "@/email/contact-form-email";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (formData: FormData) => {
+
   const senderEmail = formData.get("senderEmail");
   const senderName = formData.get("senderName");
   const message = formData.get("message");

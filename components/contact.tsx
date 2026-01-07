@@ -36,8 +36,10 @@ export default function Contact() {
       } else {
         toast.error("Unexpected server response. Please try again.");
       }
-    } catch {
-      toast.error("Something went wrong. Please try again.");
+    } catch (error) {
+      console.error("Contact form error:", error);
+      const errorMessage = error instanceof Error ? error.message : "Something went wrong. Please try again.";
+      toast.error(errorMessage);
     } finally {
       setPending(false);
     }
