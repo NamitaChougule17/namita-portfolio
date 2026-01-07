@@ -48,7 +48,7 @@ export default function Experience() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   return (
-    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+    <section id="experience" ref={ref} className="scroll-mt-28 mb-14 sm:mb-20">
       <SectionHeading>My Experience</SectionHeading>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">

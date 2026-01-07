@@ -6,7 +6,7 @@ type SectionHeadingProps = {
 
 export default function SectionHeading({ children }: SectionHeadingProps) {
   return (
-    <h2 className="text-3xl font-medium capitalize mb-8 text-center">
+    <h2 className="text-3xl font-medium capitalize mb-8 text-center text-[#E8E8EA]">
       {children}
     </h2>
   );

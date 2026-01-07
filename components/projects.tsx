@@ -13,7 +13,7 @@ export default function Projects() {
     <section
       ref={ref}
       id="projects"
-      className="scroll-mt-28 mb-28 sm:mb-40 w-full max-w-7xl mx-auto"
+      className="scroll-mt-28 mb-14 sm:mb-20 w-full max-w-7xl mx-auto"
     >
       <SectionHeading>My Projects</SectionHeading>
 

@@ -57,7 +57,7 @@ export default function Contact() {
       {/* Section header */}
       <div className="text-center">
         <SectionHeading>Contact Me</SectionHeading>
-        <p className="mx-auto mt-2 max-w-2xl text-base sm:text-lg text-gray-800">
+        <p className="mx-auto mt-2 max-w-2xl text-base sm:text-lg text-[#E8E8EA]">
           I&apos;d love to hear from you — whether you have a question, opportunity, or just want to say hi!
         </p>
       </div>
@@ -70,24 +70,24 @@ export default function Contact() {
             {/* Phone */}
             <a
               href="tel:+15715647751"
-              className="group rounded-2xl border border-gray-200 bg-white p-4 text-center shadow-sm transition hover:shadow-md hover:bg-gray-50 active:scale-[0.99]"
+              className="group rounded-2xl border border-[#E8E8EA]/20 bg-[#1E293B]/50 p-4 text-center shadow-sm transition hover:shadow-md hover:bg-[#1E293B]/70 active:scale-[0.99] backdrop-blur-sm"
             >
               <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-teal-400 to-sky-500 text-white">
                 <FaPhone />
               </div>
-              <p className="text-sm text-gray-900 font-medium">+1 (571) 564-7751</p>
+              <p className="text-sm text-[#E8E8EA] font-medium">+1 (571) 564-7751</p>
               
             </a>
 
             {/* Email */}
             <a
               href="mailto:namitac9817@gmail.com"
-              className="group rounded-2xl border border-gray-200 bg-white p-4 text-center shadow-sm transition hover:shadow-md hover:bg-gray-50 active:scale-[0.99]"
+              className="group rounded-2xl border border-[#E8E8EA]/20 bg-[#1E293B]/50 p-4 text-center shadow-sm transition hover:shadow-md hover:bg-[#1E293B]/70 active:scale-[0.99] backdrop-blur-sm"
             >
               <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-violet-400 to-fuchsia-500 text-white">
                 <FaEnvelope />
               </div>
-              <p className="truncate text-sm text-gray-900 font-medium">
+              <p className="truncate text-sm text-[#E8E8EA] font-medium">
                 namitac9817@gmail.com
               </p>
       
@@ -98,19 +98,19 @@ export default function Contact() {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+            className="rounded-2xl border border-[#E8E8EA]/20 bg-[#1E293B]/50 p-6 shadow-sm backdrop-blur-sm"
           >
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {/* Name */}
               <label className="relative block">
-                <span className="mb-1 block text-sm font-medium text-gray-700">
+                <span className="mb-1 block text-sm font-medium text-[#E8E8EA]">
                   Your name
                 </span>
-                <span className="pointer-events-none absolute left-3 top-10 text-gray-500">
+                <span className="pointer-events-none absolute left-3 top-10 text-[#A0A0A0]">
                   <FaUser />
                 </span>
                 <input
-                  className="w-full rounded-xl border border-gray-300 bg-white pl-10 pr-3 py-3 text-gray-900 outline-none ring-0 transition focus:border-teal-400 focus:ring-2 focus:ring-teal-400"
+                  className="w-full rounded-xl border border-[#E8E8EA]/30 bg-[#0F1419] pl-10 pr-3 py-3 text-[#E8E8EA] outline-none ring-0 transition focus:border-[#667EEA] focus:ring-2 focus:ring-[#667EEA]/50"
                   name="senderName"
                   type="text"
                   placeholder="John Doe"
@@ -122,14 +122,14 @@ export default function Contact() {
 
               {/* Email */}
               <label className="relative block">
-                <span className="mb-1 block text-sm font-medium text-gray-700">
+                <span className="mb-1 block text-sm font-medium text-[#E8E8EA]">
                   Your email
                 </span>
-                <span className="pointer-events-none absolute left-3 top-10 text-gray-500">
+                <span className="pointer-events-none absolute left-3 top-10 text-[#A0A0A0]">
                   <FaEnvelope />
                 </span>
                 <input
-                  className="w-full rounded-xl border border-gray-300 bg-white pl-10 pr-3 py-3 text-gray-900 outline-none ring-0 transition focus:border-teal-400 focus:ring-2 focus:ring-teal-400"
+                  className="w-full rounded-xl border border-[#E8E8EA]/30 bg-[#0F1419] pl-10 pr-3 py-3 text-[#E8E8EA] outline-none ring-0 transition focus:border-[#667EEA] focus:ring-2 focus:ring-[#667EEA]/50"
                   name="senderEmail"
                   type="email"
                   placeholder="john@example.com"
@@ -146,14 +146,14 @@ export default function Contact() {
                 Your message
               </span>
               <textarea
-                className="h-40 w-full resize-y rounded-xl border border-gray-300 bg-white px-3 py-3 text-gray-900 outline-none transition focus:border-teal-400 focus:ring-2 focus:ring-teal-400"
+                className="h-40 w-full resize-y rounded-xl border border-[#E8E8EA]/30 bg-[#0F1419] px-3 py-3 text-[#E8E8EA] outline-none transition focus:border-[#667EEA] focus:ring-2 focus:ring-[#667EEA]/50"
                 name="message"
                 placeholder="Hi! I'd like to discuss..."
                 maxLength={5000}
                 required
                 aria-label="Your message"
               />
-              <FaPaperPlane className="pointer-events-none absolute bottom-3 right-3 text-gray-500" />
+              <FaPaperPlane className="pointer-events-none absolute bottom-3 right-3 text-[#A0A0A0]" />
             </label>
 
             <div className="mt-4">

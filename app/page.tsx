@@ -12,11 +12,11 @@ export default function Home() {
       <Intro />
       <SectionDivider />
       <Experience />
-      <SectionDivider />
+      <SectionDivider compact />
       <Education />
       <SectionDivider />
       <Projects />
-      <SectionDivider />
+      <SectionDivider compact />
       <Certifications />
       <SectionDivider />
       <Contact />

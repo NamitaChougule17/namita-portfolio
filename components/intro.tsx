@@ -38,7 +38,7 @@ export default function Intro() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ type: "tween", duration: 0.5 }}
         >
-          <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-gray-200 dark:border-gray-700 shadow-xl">
+          <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-[#E8E8EA]/20 shadow-xl">
             <Image
               src="/images/NamitaProfile.png"
               alt="Namita Chougule"
@@ -49,18 +49,18 @@ export default function Intro() {
           </div>
         </motion.div>
 
-        {/* Text content on the right */}
-        <div className="flex-1 text-center md:text-left">
+        {/* Text content - centered */}
+        <div className="flex-1 text-center">
           <motion.h1
-            className="mb-2 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+            className="mb-2 text-2xl font-medium !leading-[1.5] sm:text-4xl text-[#E8E8EA]"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            Hello 
+            Hello🤝
           </motion.h1>
 
           <motion.h1
-            className="mb-3 text-3xl font-bold !leading-[1.2] sm:text-4xl"
+            className="mb-3 text-3xl font-bold !leading-[1.2] sm:text-4xl text-[#E8E8EA]"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -71,7 +71,7 @@ export default function Intro() {
           <AnimatePresence mode="wait">
             <motion.h2
               key={titles[currentTitleIndex]}
-              className="mb-4 text-2xl font-semibold !leading-[1.5] sm:text-3xl text-[#667EEA] dark:text-[#8B7CF6]"
+              className="mb-4 text-2xl font-semibold !leading-[1.5] sm:text-3xl text-[#667EEA] mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -82,7 +82,7 @@ export default function Intro() {
           </AnimatePresence>
 
           <motion.p
-            className="text-lg font-medium !leading-[1.7] sm:text-xl text-[#2C2C2C] dark:text-[#E8E8EA] mb-10"
+            className="text-lg font-medium !leading-[1.7] sm:text-xl text-[#E8E8EA] mb-10"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
