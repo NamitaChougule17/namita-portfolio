@@ -145,7 +145,7 @@ export const projectsData = [
     liveUrl: "",
   },
   {
-    title: "MovieLens Recommender System",
+    title: "Movie Recommender System",
     description: "Built a personalized recommendation engine using matrix factorization on the MovieLens dataset. Learned latent user and item embeddings and optimized model performance through tuning and regularization. Generated top-N recommendations based on predicted user preferences.",
     tags: [
       "Python",
@@ -154,7 +154,7 @@ export const projectsData = [
       "Machine Learning",
     ],
     imageUrl: factchecker,
-    githubUrl: "https://github.com/NamitaChougule17/movielens-recommender-system",
+    githubUrl: "https://github.com/NamitaChougule17/movie-recommender-system",
     liveUrl: "",
   },
   {
