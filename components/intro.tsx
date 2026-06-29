@@ -112,8 +112,8 @@ export default function Intro() {
 
         <a
           className="group bg-[#FFFFFF] dark:bg-[#1E293B]/50 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-[#1A1A1A]/20 dark:border-[#E8E8EA]/20 text-[#1A1A1A] dark:text-[#E8E8EA]"
-          href="/images/Namita Chougule_Data Engineer26.pdf"
-          download="Namita Chougule_Data Engineer26.pdf"
+          href="/images/Namita Chougule-Data Engineer.pdf"
+          download="Namita Chougule-Data Engineer.pdf"
         >
           Download CV
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />

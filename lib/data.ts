@@ -44,7 +44,7 @@ export const experiencesData = [
   },
   {
     title: "Data Engineer",
-    location: "NTT DATA Services",
+    location: "Infinite Infolab",
     date: "Jan 2021 – Dec 2023",
     description: [
       "Developed real-time ingestion pipelines using Apache Kafka and PySpark Structured Streaming on AWS EMR, enabling the platform to process peak volumes of 15,000 events per second and reducing data delivery latency from 6 hours to under 15 seconds.",
@@ -197,7 +197,7 @@ export const certificationsData = [
     credentialUrl: "https://www.udemy.com/certificate/UC-407e2fb0-8b77-419e-b4bf-7ff9dbb107d1/",
     credentialId: "UC-407e2fb0-8b77-419e-b4bf-7ff9dbb107d1",
   },
-  {
+  /*{
     name: "Agile and Scrum Certification",
     issuer: "NTT DATA Learning Certification Institute (NLCI)",
     date: "",
@@ -224,7 +224,7 @@ export const certificationsData = [
     date: "",
     credentialUrl: "https://drive.google.com/file/d/1quabH7rTQFjuHYvMHw2Y4b8ZtJ8_t2FM/view?usp=drive_link",
     credentialId: "",
-  },
+  },*/
   {
     name: "Programming Data Structures and Algorithms using Python",
     issuer: "NPTEL Elite Certificate by IIT Madras",
