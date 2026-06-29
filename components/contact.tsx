@@ -77,20 +77,20 @@ export default function Contact() {
               <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-teal-400 to-sky-500 text-white">
                 <FaPhone />
               </div>
-              <p className="text-sm text-[#E8E8EA] font-medium">+1 (571) 564-7751</p>
+              <p className="text-sm text-[#E8E8EA] font-medium">301-284-8371 </p>
               
             </a>
 
             {/* Email */}
             <a
-              href="mailto:namitac9817@gmail.com"
+              href="mailto:namita@jobsdesire.com"
               className="group rounded-2xl border border-[#E8E8EA]/20 bg-[#1E293B]/50 p-4 text-center shadow-sm transition hover:shadow-md hover:bg-[#1E293B]/70 active:scale-[0.99] backdrop-blur-sm"
             >
               <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-violet-400 to-fuchsia-500 text-white">
                 <FaEnvelope />
               </div>
               <p className="truncate text-sm text-[#E8E8EA] font-medium">
-                namitac9817@gmail.com
+                namita@jobsdesire.com
               </p>
       
             </a>

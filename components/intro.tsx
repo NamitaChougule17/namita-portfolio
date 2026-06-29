@@ -87,7 +87,7 @@ export default function Intro() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            I am a Data Engineer with 3+ years of experience building scalable data pipelines, cloud data platforms, and real-time processing systems. I work across SQL, Python, Spark, and AWS to turn raw data into reliable, analytics-ready systems, and I also build AI-enabled data pipelines that support intelligent applications and automation. I enjoy solving complex data problems with clean, production-ready solutions.
+            I am a Data Engineer with 4 years of experience building scalable data pipelines, cloud data platforms, and real-time processing systems. I work across SQL, Python, Spark, and AWS to turn raw data into reliable, analytics-ready systems, and I also build AI-enabled data pipelines that support intelligent applications and automation. I enjoy solving complex data problems with clean, production-ready solutions.
           </motion.p>
         </div>
       </div>
@@ -112,8 +112,8 @@ export default function Intro() {
 
         <a
           className="group bg-[#FFFFFF] dark:bg-[#1E293B]/50 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-[#1A1A1A]/20 dark:border-[#E8E8EA]/20 text-[#1A1A1A] dark:text-[#E8E8EA]"
-          href="/images/NamitaChougule_Resume26.pdf"
-          download="NamitaChougule_Resume26.pdf"
+          href="/images/Namita Chougule M-Data Engineer.pdf"
+          download="Namita Chougule M-Data Engineer.pdf"
         >
           Download CV
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
